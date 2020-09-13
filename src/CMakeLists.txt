@@ -21,11 +21,11 @@ link_directories(
     ${GLFW_LIBRARY_DIRS}
 )
 
+
+
 # Set app source
-set(APP_SOURCE
-    Curve.cpp
-    Renderer.cpp
-    main.cpp
+file(GLOB APP_SOURCE
+    "*.cpp"
 )
 
 if (WIN32)
@@ -33,13 +33,8 @@ if (WIN32)
 endif(WIN32)
 
 # Set app header
-set(APP_HEADER
-    Curve.h
-    Camera.h
-    Lighting.h
-    Object.h
-    Renderer.h
-    Shader.h
+file(GLOB APP_HEADER
+    "*.h"
 )
 
 #-------------------------------------------------------------------------------
