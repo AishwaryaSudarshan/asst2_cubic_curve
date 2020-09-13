@@ -175,11 +175,11 @@ void Renderer::load_models()
 	// TODO: replace hard-coded path!!!!
 	obj_list.clear();
 	Object main_object("../src/objs/cube.obj");
-	main_object.obj_color = glm::vec4(0.7f, 0.7f, 0.7f, 1.0f);
+	main_object.obj_color = glm::vec4(1.0, 1.0, 0.0, 1.0);
 	main_object.obj_name = "main_object";
 
 	Object plane_object("../src/objs/plane.obj");
-	plane_object.obj_color = glm::vec4(0.5f, 0.5f, 0.5f, 1.0f);
+	plane_object.obj_color = glm::vec4(0.5, 0.5, 0.5, 1.0);
 	plane_object.obj_name = "plane";
 
 	Object arrow_object("../src/objs/arrow.obj");
@@ -188,7 +188,7 @@ void Renderer::load_models()
 	m_curve->calculate_curve();
 	Object curve_object(m_curve->curve_points_pos);
 	curve_object.m_render_type = RENDER_LINES;
-	curve_object.obj_color = glm::vec4(1.0, 0.0, 0.0,1.0);
+	curve_object.obj_color = glm::vec4(1.0, 0.0, 0.0, 1.0);
 	curve_object.obj_name = "curve";
 
 	bind_vaovbo(main_object);
