@@ -327,6 +327,18 @@ void Renderer::draw_object(Shader& shader, Object& object)
 	if (object.m_render_type == RENDER_LINES)
 	{
 		glLineWidth(20.0);
+		// ATTENTION:
+		// we cannot change the line width on MacOS
+		// the GPU on Mac only support line width of 1. (default width)
+		// uncomment following line and run the program you will see range is [1,1]
+		//
+		// GLfloat lineWidthRange[2] = {0.0f, 0.0f};
+		// glGetFloatv(GL_ALIASED_LINE_WIDTH_RANGE, lineWidthRange);
+		// // Minimum supported line width is in lineWidthRange[0].
+		// // Maximum supported line width is in lineWidthRange[1].
+		// std::cout << "lineWidthRange[0]: " << lineWidthRange[0] << std::endl;
+		// std::cout << "lineWidthRange[1]: " << lineWidthRange[1] << std::endl;
+		//
 		if (object.m_obj_type == OBJ_POINTS)
 		{
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
