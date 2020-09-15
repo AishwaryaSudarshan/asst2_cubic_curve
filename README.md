@@ -37,6 +37,17 @@ To run your executable file:
 $ ./asst
 ```
 
+When you first run the application, you will see:
+
+**Note: Currently macOS doesn't support thick lines using `glLineWidth()`, which is why the line looks thinner than the picture on elearning.**
+
+<img src="https://github.com/CS6323utd/asst2_cubic_curve/blob/master/demo/start.png" width="500" height="300">
+
+
+
+
+
+
 ### What You Need to Do
 Please refer to the [PDF](https://github.com/CS6323utd/asst2_cubic_curve/blob/master/CS_6323.001_Assignment2.pdf) about what you need to do for this assignment.
 
