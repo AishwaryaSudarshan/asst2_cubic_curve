@@ -339,6 +339,8 @@ void Renderer::draw_object(Shader& shader, Object& object)
 		// std::cout << "lineWidthRange[0]: " << lineWidthRange[0] << std::endl;
 		// std::cout << "lineWidthRange[1]: " << lineWidthRange[1] << std::endl;
 		//
+		// check this post: https://stackoverflow.com/a/34867791
+		// and this: https://developer.blender.org/T73560
 		if (object.m_obj_type == OBJ_POINTS)
 		{
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
