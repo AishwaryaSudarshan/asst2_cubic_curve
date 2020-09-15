@@ -24,6 +24,12 @@ void Curve::init()
 
 void Curve::calculate_curve()
 {
+	//////////
+	// Asst2
+	// You are supposed to add certain number of points
+	// to this->curve_points_pos.
+	// Ecach point is calculated through Catmull-Rom formulation.
+	// Note that all control points are given in this->control_points_pos.
 	this->curve_points_pos = {
 		{ 0.0, 8.5, -2.0 },
 		{ -3.0, 11.0, 2.3 },
@@ -34,4 +40,5 @@ void Curve::calculate_curve()
 		{ 7.0, 8.0, -2.0 },
 		{ 3.0, 10.0, 3.7 }
 	};
+
 }

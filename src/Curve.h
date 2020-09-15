@@ -13,12 +13,15 @@ public:
 	~Curve();
 	
 	void init();
+	//////////
+	// Asst2: add calculated points to curve.
 	void calculate_curve();
-	
-public:
-	float tau = 0.5; // Coefficient for catmull-rom spline
-	int num_points_per_segment = 200;
 
+public:
 	std::vector<glm::vec3> control_points_pos;
 	std::vector<glm::vec3> curve_points_pos;
+
+private:
+	float tau = 0.5; // Coefficient for Catmull-Rom splines
+	int num_points_per_segment = 200;
 };
